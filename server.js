@@ -11,6 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
+app.get('/', (req, res) => res.send('Hello'))
+
 app.post('/submit-form',  (req, res) => {
 
     const { email, firstName, message } = req.body;
