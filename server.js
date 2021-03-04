@@ -13,6 +13,8 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res) => res.send('Hello'))
 
+app.get('/submit-form', (req, res) => res.send('Submit form'))
+
 app.post('/submit-form',  (req, res) => {
 
     const { email, firstName, message } = req.body;
@@ -33,6 +35,8 @@ app.post('/submit-form',  (req, res) => {
         subject: 'Portfolio Contact Form',
         text: `${firstName} says ${message}`
     })
+
+    res.send('Success')
 })
 
 app.listen(PORT)
