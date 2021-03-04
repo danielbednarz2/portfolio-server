@@ -35,8 +35,6 @@ app.post('/submit-form',  (req, res) => {
         subject: 'Portfolio Contact Form',
         text: `${firstName} says ${message}`
     })
-
-    res.send('Success')
 })
 
 app.listen(PORT)
