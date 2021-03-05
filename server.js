@@ -74,4 +74,4 @@ app.post('/submit-form',  (req, res) => {
 });
 
 
-app.listen(PORT || 8080)
+app.listen(PORT)
