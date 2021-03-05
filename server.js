@@ -7,7 +7,6 @@ import { google } from 'googleapis'
 const app = express();
 
 const require = createRequire(import.meta.url)
-require('dotenv').config();
 const OAuth2 = google.auth.OAuth2;
 
 const { GMAIL_USER, CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN, PORT } = process.env;
