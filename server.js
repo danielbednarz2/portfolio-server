@@ -69,7 +69,7 @@ app.post('/submit-form',  (req, res) => {
         text: `${firstName} says ${message}`
     });
 
-    res.send('Success')
+    res.redirect('https://danielwalker.dev')
 });
 
 
