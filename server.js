@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
-app.get('/', (req, res) => res.send('Hello'))
+app.get('/', (req, res) => res.send('You must know what you are doing'))
 
 
 app.post('/submit-form',  (req, res) => {
@@ -63,13 +63,13 @@ app.post('/submit-form',  (req, res) => {
     }
 
     info({
-        from: `${email}`,
+        from: `${GMAIL_USER}`,
         to: `${GMAIL_USER}`,
         subject: 'Portfolio Contact Form',
-        text: `${firstName} says ${message}`
+        text: `${firstName} at ${email} says ${message}`
     });
 
-    res.redirect('https://danielwalker.dev')
+    res.redirect('https://danielwalker.dev/#home')
 });
 
 
